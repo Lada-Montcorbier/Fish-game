@@ -30,11 +30,14 @@
 #angler1,
 #angler2,
 #lucky,
-#hivewhale {
+#hivewhale,
+#drone {
   display: none;
 }
 
 #projectile,
-#gears {
+#gears,
+#smokeExplosion,
+#fireExplosion {
   display: none;
 }
