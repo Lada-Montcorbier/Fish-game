@@ -437,6 +437,34 @@ window.addEventListener('load', function () {
     }
   }
 
+  class Stalker extends Enemy {
+    constructor(game) {
+      super(game);
+      this.width = 243;
+      this.height = 123;
+      this.y = Math.random() * (this.game.height * 0.95 - this.height);
+      this.image = document.getElementById('stalker');
+      this.frameY = 0;
+      this.lives = 10;
+      this.score = this.lives;
+      this.speedX = Math.random() * -1.2 - 2;
+    }
+  }
+
+  class Razorfin extends Enemy {
+    constructor(game) {
+      super(game);
+      this.width = 187;
+      this.height = 149;
+      this.y = Math.random() * (this.game.height * 0.95 - this.height);
+      this.image = document.getElementById('razorfin');
+      this.frameY = 0;
+      this.lives = 3;
+      this.score = this.lives;
+      this.speedX = Math.random() * -1.2 - 2;
+    }
+  }
+
   class Layer {
     constructor(game, image, speedModifier) {
       this.game = game;
@@ -728,10 +756,12 @@ window.addEventListener('load', function () {
     addEnemy() {
       const randomize = Math.random();
       if (randomize < 0.3) this.enemies.push(new Angler1(this));
-      else if (randomize < 0.6) this.enemies.push(new Angler2(this));
+      else if (randomize < 0.5) this.enemies.push(new Razorfin(this));
+      else if (randomize < 0.6) this.enemies.push(new Stalker(this));
       else if (randomize < 0.7) this.enemies.push(new HiveWhale(this));
       else if (randomize < 0.8) this.enemies.push(new BulbWhale(this));
       else if (randomize < 0.9) this.enemies.push(new MoonFish(this));
+      else if (randomize < 1) this.enemies.push(new Angler2(this));
       else this.enemies.push(new LuckyFish(this));
     }
     addExplosion(enemy) {
