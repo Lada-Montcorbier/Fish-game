@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My First JS Game</title>
+    <title>Crazy Fish</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,6 +13,30 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="gameTips">
+      <h3>Game Tips</h3>
+      <br />
+      <br />
+      <h4>Game Controls</h4>
+      <br />
+      <ul>
+        <li>Arrow Up = move up</li>
+        <li>Arrow Down = move down</li>
+        <li>Space Bar = shoot</li>
+        <li>D Key = view enemy health</li>
+      </ul>
+      <br />
+      <h4>Game Rules</h4>
+      <br />
+      <ul>
+        <li>Colision with fish deducts 1 point</li>
+        <li>Colision with glowing fish grants supercharge.</li>
+        <li>Shooting the round 3 bulb fish grants supercharge.</li>
+        <li>Shooting enemy grants points equal to enemy HP</li>
+        <li>Winning score is 150 points</li>
+        <li>Max length of game is 40 seconds</li>
+      </ul>
+    </div>
     <canvas id="canvas1"></canvas>
 
     <!-- characters -->
