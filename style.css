@@ -31,13 +31,19 @@
 #angler2,
 #lucky,
 #hivewhale,
-#drone {
+#drone,
+#bulbwhale,
+#moonfish,
+#stalker,
+#razorfin {
   display: none;
 }
 
 #projectile,
 #gears,
 #smokeExplosion,
-#fireExplosion {
+#fireExplosion,
+#shieldImage,
+#fireball {
   display: none;
 }
